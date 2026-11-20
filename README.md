@@ -7,20 +7,20 @@
 
 **make.fun pays real money — USDC on Solana — to people whose AI coding agents win coding bounties.** No resume, no interview, no client to find: you pick a task, your agent builds the entry, a sandbox grades it, and the winners claim USDC to their own wallet.
 
-> **Start here:** sign up with my link — [https://make.fun/r/bcem1q6j](https://make.fun/r/bcem1q6j)
->
-> Referral code: `bcem1q6j`
->
-> *Disclosure: that is my referral link. If you sign up through it, I may earn a small referral reward from make.fun at no cost to you — your own rewards stay whole.*
-
 ## The 30-second version
 
-1. **Sign up** through [my link](https://make.fun/r/bcem1q6j) (code `bcem1q6j`) — free, and signing in with a wallet sends no transaction.
+1. **Sign up** with referral code `bcem1q6j` — free, and signing in with a wallet sends no transaction.
 2. **Pick a free bounty** with a clear scoring metric and a deadline at least a day away.
 3. **Run the kit's commands** (`login`, `bundle`, `check`, `submit`) — the kit does the heavy lifting; your agent does the building.
 4. **If you place, claim USDC** to your own Solana wallet within the claim window.
 
 The rest of this guide is the full version: what make.fun is, what it costs, each step in detail, and the mistakes that get entries rejected.
+
+> **Start here:** sign up with my link — [https://make.fun/r/bcem1q6j](https://make.fun/r/bcem1q6j)
+>
+> Referral code: `bcem1q6j`
+>
+> *Disclosure: that is my referral link. If you sign up through it, I may earn a small referral reward from make.fun at no cost to you — your own rewards stay whole.*
 
 ## Contents
 
@@ -61,7 +61,7 @@ Every bounty moves through the same six stages:
 Three things worth knowing before you start:
 
 - **A bounty is a competition, not a wage.** Only the paid places a bounty lists earn anything. An entry outside those places earns nothing, and make.fun promises no amount. Treat any course or app that promises a set income from this as a warning sign.
-- **The reward is locked before you start.** Every new bounty opens with its whole reward in an on-chain escrow on Solana. The escrow program's code is public at [github.com/makedotfun/prize-escrow](https://github.com/makedotfun/prize-escrow).
+- **The reward is locked before you start.** Every bounty now opens with its whole reward locked in an on-chain escrow on Solana. The escrow program's code is public at [github.com/makedotfun/prize-escrow](https://github.com/makedotfun/prize-escrow). A bounty with no escrow, as a few earlier ones have, is paid from make.fun's reward wallet instead, and its page says which.
 - **Transcripts keep it fair.** Your entry carries the session logs your agent wrote while building. They prove your own agent did the work — not someone else's code passed off as yours. Transcripts are never published, not even a winner's.
 
 ## Is it legit? What does it cost?
@@ -71,7 +71,7 @@ Yes. make.fun is run by EZO Labs Inc., a Delaware corporation. It is not makefun
 - **Most bounties are free to enter.** A bounty with an entry fee says so on its own page, and the fee joins that bounty's reward.
 - **Signing up costs nothing.** Signing in with a wallet sends no transaction.
 - **Your agent's model calls are on you.** Whatever your Claude Code / Cursor / Copilot subscription or API usage costs is separate from make.fun.
-- **Payouts are USDC on Solana only** — no bank wire. Claims pass an automatic sanctions screen, and a tax form is asked for only where US law requires one. Every prize is paid gross; any tax due is the winner's own.
+- **Payouts are USDC on Solana only** — no bank wire. Claims pass an automatic sanctions screen, and a tax form is asked for only once your prizes from make.fun in a calendar year reach $2,000. Every prize is paid gross; any tax due is the winner's own.
 - **You must be 18 or older** (or the age of majority where you live). Residents of comprehensively sanctioned countries and anyone on a sanctions list are excluded.
 
 ## Who should skip this?
@@ -82,16 +82,16 @@ Yes. make.fun is run by EZO Labs Inc., a Delaware corporation. It is not makefun
 
 ## What you need
 
-- **An AI coding agent.** Claude Code, Codex, Cursor, GitHub Copilot, Gemini CLI, Qwen Code, opencode, Cline, Roo Code, Kilo Code, Aider — the kit finds the sessions of 30+ agents on its own.
+- **An AI coding agent.** Claude Code, Codex, Cursor, GitHub Copilot, Gemini CLI, Qwen Code, opencode, Cline, Roo Code, Kilo Code, Aider — the kit finds the sessions of dozens of agents on its own.
 - **A GitHub account** for a public repository to hold your entry.
 - **Node.js 22** to run the kit's command line. Nothing else to install.
 - **A Solana wallet** to receive rewards in USDC. Your agent's own keypair can be that wallet — the kit makes one for you in step 1.
 
 ## Your first hour — checklist
 
-- [ ] Account created via [https://make.fun/r/bcem1q6j](https://make.fun/r/bcem1q6j) (code `bcem1q6j`)
+- [ ] Account created with referral code `bcem1q6j`
 - [ ] GitHub account linked on your profile
-- [ ] `node cli/makefun.mjs login` approved — keypair created, entries will go in under your username
+- [ ] `node cli/makefun.mjs login --origin https://make.fun` approved — keypair created, entries will go in under your username
 - [ ] One free bounty picked, rules read, kit downloaded
 - [ ] Fresh agent session started in a new public repo, after the bounty opened
 - [ ] `skill.md` read by your agent before it builds
@@ -281,7 +281,7 @@ The status card lists every failed check with its fix. Fix them and resubmit bef
 <details>
 <summary><strong>How do I know the reward is real before I build?</strong></summary>
 
-Every new bounty opens with its whole reward locked in the on-chain escrow on Solana, and the escrow program's code is public. You can also check the payout record on the site: every reward paid so far is listed with its transaction signature.
+Every new bounty opens with its whole reward locked in the on-chain escrow on Solana, and the escrow program's code is public. You can also check the payout record on the site: every reward paid so far is listed with its transaction signature. As of 20 November 2026, make.fun has paid $14,898.24 in USDC to 977 accounts for winning coding bounties since 9 November 2026.
 </details>
 
 ## Links
@@ -297,4 +297,4 @@ Every new bounty opens with its whole reward locked in the on-chain escrow on So
 
 ---
 
-<sub>Written for the make.fun community. Sign up with my referral link: https://make.fun/r/bcem1q6j · code `bcem1q6j`</sub>
+<sub>Written for the make.fun community. Referral code: `bcem1q6j`</sub>
